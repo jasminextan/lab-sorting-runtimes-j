@@ -45,8 +45,6 @@ Traceback (most recent call last):
     from sorting.sorting import merge_sorted, quick_sorted
 ModuleNotFoundError: No module named 'sorting'
 ```
-> **NOTE:**
-> In the code block above, I put both the command and the entire output of the command.
 > Before the code block, I put a short summary of my steps using English intermixed with inline-code.
 > When reporting error messages, it is standard to have a short English language summary and a full output of the error message in a code block.
 > (Even if the output is hundreds of lines long, people will still include the full output, since all of those lines provide important information.)
@@ -120,6 +118,32 @@ $ python3 runtimes.py --max_x=22
 and copy/paste the resulting table into this README file below this line.
 
 <!-- add the table here -->
+|len(xs)|timsort|merge_sorted|quick_sorted|
+|:-----|:-------:|:-------:|:---------:|
+|2**0| 2.67e-06 | 2.07e-06 | 1.72e-06 |
+|2**1| 1.80e-06 | 6.58e-06 | 8.65e-06 |
+|2**2| 1.56e-06 | 1.08e-05 | 1.10e-05 |
+|2**3| 2.16e-06 | 2.20e-05 | 2.34e-05 |
+|2**4| 3.23e-06 | 4.77e-05 | 5.02e-05 |
+|2**5| 5.18e-06 | 1.02e-04 | 1.12e-04 |
+|2**6| 1.08e-05 | 2.26e-04 | 2.96e-04 |
+|2**7| 2.10e-05 | 4.98e-04 | 5.98e-04 |
+|2**8| 4.55e-05 | 1.10e-03 | 1.43e-03 |
+|2**9| 9.96e-05 | 2.42e-03 | 3.08e-03 |
+|2**10| 2.21e-04 | 5.32e-03 | 7.08e-03 |
+|2**11| 4.89e-04 | 1.16e-02 | 1.46e-02 |
+|2**12| 1.05e-03 | 2.51e-02 | 3.12e-02 |
+|2**13| 2.29e-03 | 5.40e-02 | 7.24e-02 |
+|2**14| 4.93e-03 | 1.00e-01 | 9.50e-02 |
+|2**15| 6.85e-03 | 1.59e-01 | 1.94e-01 |
+|2**16| 1.53e-02 | 3.40e-01 | 4.35e-01 |
+|2**17| 3.46e-02 | 7.23e-01 | 8.93e-01 |
+|2**18| 7.62e-02 | 1.56e+00 | 2.00e+00 |
+|2**19| 1.74e-01 | 3.33e+00 | 4.23e+00 |
+|2**20| 4.00e-01 | 7.14e+00 | 9.32e+00 |
+|2**21| 9.12e-01 | 1.50e+01 | 2.10e+01 |
+|2**22| 2.18e+00 | 3.17e+01 | 4.68e+01 |
+
 
 You should observe that python's built-in sort function is 10-100x faster than yours.
 All functions have the same wort-case asymptotic complexity (i.e. $\Theta(n \log n)$),

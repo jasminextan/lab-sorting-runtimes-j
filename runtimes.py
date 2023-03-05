@@ -31,9 +31,11 @@ if __name__ == '__main__':
         if args.input == 'sorted':
             # FIXME 2:
             # in this case, we should generate a list that is already sorted;
-            # (it turns out to be common to run sorting algorithms on lists that are already sorted or almost sorted)
+            # (it turns out to be common to run sorting algorithms on
+            # lists that are already sorted or almost sorted)
             # the timsort algorithm has extra optimizations for this case,
-            # and whenever the input list is sorted, timsort will run in time Theta(n) instead of Theta(n log n)
+            # and whenever the input list is sorted, timsort will run
+            # in time Theta(n) instead of Theta(n log n)
             #
             # your specific task is to make xs be a list of all numbers between 0 and 2**x
             xs = FIXME
@@ -51,11 +53,13 @@ if __name__ == '__main__':
         # display the runtimes
         # FIXME 1:
         # Modify the print statement below so that a nice looking markdown table is printed.
-        # All runtimes should be displayed in seconds using scientific notation and three significant figures.
+        # All runtimes should be displayed in seconds using
+        # scientific notation and three significant figures.
         # You will have to look up how to do this formatting.
         # In order to get a proper markdown table,
         # you will have to also print a header line somewhere else.
-        print(f'len(xs)=2**{x} runtimes={runtimes}')
+        print(f"|2**{x}| {runtimes['timsort']:0.2e} | {runtimes['merge_sorted']:0.2e} | {runtimes['quick_sorted']:0.2e} |")
+
 
         # HINT:
         # use f-strings and a print statement that looks something like
